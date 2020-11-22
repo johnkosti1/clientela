@@ -1,0 +1,43 @@
+@import "variables";
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  font-family: 'Gotham', sans-serif;
+  font-style: normal;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  padding: $padding;
+  color: $color;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  background-color: $background-color;
+
+  &.icon {
+    padding-left: $padding + $icon-size;
+    [class^="icon-"], [class*=" icon-"] {
+      font-size: $icon-size;
+      position: absolute;
+      left: $padding;
+    }
+  }
+
+  &.active {
+    background-color: $active-background-color;
+    color: $active-color;
+  }
+
+  &.disabled {
+    color: $disabled-color;
+    cursor: default;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
