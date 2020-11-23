@@ -1,6 +1,5 @@
 import {Component, OnInit, ChangeDetectionStrategy, Input, HostBinding} from '@angular/core';
-
-type IconType = 'location' | 'product' | 'skin' | 'video' | 'shop';
+import {IconType} from "../../types/icon";
 
 @Component({
   selector: '[app-button]',
@@ -11,6 +10,9 @@ type IconType = 'location' | 'product' | 'skin' | 'video' | 'shop';
 export class ButtonComponent implements OnInit {
 
   @Input() icon: IconType;
+
+  @HostBinding('class.with-sub-text')
+  @Input() subText: string;
 
   @HostBinding('class.active')
   @Input() active: boolean;

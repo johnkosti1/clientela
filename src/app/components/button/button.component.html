@@ -1,2 +1,8 @@
 <i *ngIf="icon" [class]="'icon-' + icon"></i>
-<ng-content></ng-content>
+<div class="content">
+  <ng-content></ng-content>
+  <ng-container *ngIf="subText">
+    <br/>
+    <span>{{subText}}</span>
+  </ng-container>
+</div>

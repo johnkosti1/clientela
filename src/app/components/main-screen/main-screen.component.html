@@ -1,0 +1,32 @@
+
+<div class="title-container">
+  <h2>Welcome</h2>
+  <p class="sub-title">Please select one of our services</p>
+</div>
+
+<ng-container *ngFor="let button of services">
+  <button
+    app-button
+    [icon]="button.icon"
+    [subText]="button.subText"
+    [disabled]="button.disabled"
+    [active]="isActive(button)"
+    (click)="onClick(button)"
+  >
+    {{button.title}}
+  </button>
+
+  <div class="sub-buttons" [class.active]="isActive(button)">
+    <ng-container *ngFor="let subButton of channels">
+      <button
+        app-button
+        class="secondary"
+        [icon]="subButton.icon"
+        [active]="isSubActive(subButton)"
+        (click)="onSubClick(subButton)"
+      >
+        {{subButton.title}}
+      </button>
+    </ng-container>
+  </div>
+</ng-container>

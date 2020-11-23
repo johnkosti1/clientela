@@ -8,7 +8,6 @@
   position: relative;
   border: none;
   cursor: pointer;
-  font-family: 'Gotham', sans-serif;
   font-style: normal;
   font-size: $font-size;
   font-weight: $font-weight;
@@ -17,6 +16,7 @@
   border-radius: $border-radius;
   box-shadow: $box-shadow;
   background-color: $background-color;
+  transition: $transition;
 
   &.icon {
     padding-left: $padding + $icon-size;
@@ -35,9 +35,43 @@
   &.disabled {
     color: $disabled-color;
     cursor: default;
+    pointer-events: none;
   }
 
   &:focus {
     outline: none;
+  }
+
+  .content {
+    span {
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+  }
+
+  &.with-sub-text {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+
+  &.secondary {
+    transition-duration: 0.1s;
+  }
+
+  &.submit {
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.5);
+    border-radius: 0.6rem;
+  }
+
+  @media screen and (max-width: 300px) {
+    &.icon {
+      padding-top: $padding + $icon-size;
+      padding-left: $padding;
+      [class^="icon-"], [class*=" icon-"] {
+        font-size: $icon-size * 0.9;
+        top: $padding;
+        left: auto;
+      }
+    }
   }
 }

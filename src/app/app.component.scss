@@ -1,0 +1,12 @@
+@import "../assets/variables";
+
+:host {
+  display: block;
+  min-height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
+
+  .submit-container {
+    padding: $side-padding;
+  }
+}

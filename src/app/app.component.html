@@ -1,3 +1,22 @@
 <app-header></app-header>
 
-<button app-button icon="product">Personal Shopping</button>
+<app-main-screen
+  [selectedService]="selectedService"
+  [selectedChannel]="selectedChannel"
+  (serviceChange)="onServiceChange($event)"
+  (channelChange)="onChannelChange($event)"
+></app-main-screen>
+
+<app-locations
+  [selectedLocation]="selectedLocation"
+  (locationChange)="onLocationChange($event)"
+></app-locations>
+
+<div class="submit-container" *ngIf="{ has: hasSubmitButton } as submit">
+  <button
+    app-button
+    [active]="submit.has"
+    [disabled]="!submit.has"
+    (click)="onSubmit()"
+  >Confirm</button>
+</div>

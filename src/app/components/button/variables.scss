@@ -1,12 +1,13 @@
+@import "../../../assets/variables";
 
-$color: #333333;
+$color: $color;
 $background-color: #FFFFFF;
 $box-shadow: 0 2px 4px 0 rgba(181, 181, 181, 0.5);
 $border-radius: 4px;
-$padding: 20px;
-$icon-size: 29px;
-$font-size: 16px;
-$font-weight: 500;
+$padding: 2.1rem;
+$icon-size: 2.9rem;
+$font-size: 1.6rem;
+$font-weight: 600;
 
 $active-color: #FFFFFF;
 $active-background-color: rgba(0, 0, 0, 0.85);
