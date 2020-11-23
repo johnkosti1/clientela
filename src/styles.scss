@@ -1,4 +1,5 @@
 @import "assets/main";
+@import "assets/variables";
 
 * {
   box-sizing: border-box;
@@ -11,11 +12,11 @@ html, body {
   font-family: 'Gotham', sans-serif;
   font-size: 62.5%;
 
-  @media only screen and (max-width: 350px) {
+  @media only screen and (max-width: $min-breakpoint + 50px) {
     font-size: 55%;
   }
 
-  @media only screen and (max-width: 300px) {
+  @media only screen and (max-width: $min-breakpoint) {
     font-size: 50%;
   }
 }

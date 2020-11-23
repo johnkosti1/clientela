@@ -7,7 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MainScreenComponent } from './components/main-screen/main-screen.component';
 import { LocationsComponent } from './components/locations/locations.component';
 import { RadioLocationComponent } from './components/radio-location/radio-location.component';
-// import {AgmCoreModule} from "@agm/core";
+import {AgmCoreModule} from "@agm/core";
 
 @NgModule({
   declarations: [
@@ -20,9 +20,9 @@ import { RadioLocationComponent } from './components/radio-location/radio-locati
   ],
   imports: [
     BrowserModule,
-    // AgmCoreModule.forRoot({
-    //   apiKey: 'AIzaSyBwKM8DSEhphBp5OLwtTeaLMkl5FvErXps'
-    // })
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBwKM8DSEhphBp5OLwtTeaLMkl5FvErXps'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

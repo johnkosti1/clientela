@@ -14,7 +14,7 @@
     h2 {
       letter-spacing: 0.95px;
       font-weight: 500;
-      font-size: 20px;
+      font-size: 2rem;
       margin: 0 0 10px;
     }
   }
@@ -37,8 +37,12 @@
       margin-bottom: 2rem;
     }
 
-    @media screen and (max-width: 300px) {
+    @media screen and (max-width: $min-breakpoint) {
       flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: $max-screen-width) {
+      gap: $max-screen-width * 0.03;
     }
   }
 }
