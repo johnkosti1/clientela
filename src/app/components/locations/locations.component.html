@@ -1,0 +1,9 @@
+<p class="sub-title">Please select your preferred location</p>
+
+<ng-container *ngFor="let location of locations">
+  <app-radio-location
+    [location]="location"
+    (check)="onCheck(location)"
+    [checked]="isChecked(location)"
+  ></app-radio-location>
+</ng-container>

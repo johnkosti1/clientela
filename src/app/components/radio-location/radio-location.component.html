@@ -1,0 +1,32 @@
+<div class="button" (click)="onCheck()">
+  <div class="radio"></div>
+  <ng-container *ngIf="title; else titleContent">
+    {{title}}
+  </ng-container>
+  <ng-template #titleContent>
+    <ng-content></ng-content>
+  </ng-template>
+</div>
+<div class="content">
+  <div class="content-section">
+    <div class="title">Address</div>
+    <div class="sub-text">{{address}}</div>
+  </div>
+  <div class="content-section">
+    <div class="title">Opening Hours</div>
+    <div class="sub-text">
+      <ng-container *ngFor="let elem of openingHours">
+        <div>{{elem}}</div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="content-section">
+    <agm-map
+      [styles]="mapStyles"
+      [latitude]="mapPosition[0]"
+      [longitude]="mapPosition[1]"
+      [zoom]="13"
+    >
+    </agm-map>
+  </div>
+</div>
